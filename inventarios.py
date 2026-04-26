@@ -50,3 +50,34 @@ def calcular_valor_total():
         total += datos["precio"] * datos["cantidad"]
     
     print(f"Valor total del inventario: Q{total}")
+
+def menu():
+    while True:
+        print("\n--- MENÚ ---")
+        print("1. Agregar producto")
+        print("2. Listar productos")
+        print("3. Actualizar cantidad")
+        print("4. Eliminar producto")
+        print("5. Calcular valor total")
+        print("6. Salir")
+        
+        opcion = input("Seleccione una opción: ")
+        
+        if opcion == "1":
+            agregar_producto()
+        elif opcion == "2":
+            listar_productos()
+        elif opcion == "3":
+            actualizar_cantidad()
+        elif opcion == "4":
+            eliminar_producto()
+        elif opcion == "5":
+            calcular_valor_total()
+        elif opcion == "6":
+            print("Saliendo del programa...")
+            break
+        else:
+            print("Opción inválida.")
+
+# Ejecutar programa
+menu()
