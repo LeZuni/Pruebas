@@ -43,3 +43,10 @@ def eliminar_producto():
         print("Producto eliminado.")
     else:
         print("El producto no existe.")
+
+def calcular_valor_total():
+    total = 0
+    for datos in inventario.values():
+        total += datos["precio"] * datos["cantidad"]
+    
+    print(f"Valor total del inventario: Q{total}")
