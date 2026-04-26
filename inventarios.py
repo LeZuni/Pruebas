@@ -34,3 +34,12 @@ def actualizar_cantidad():
     nueva_cantidad = int(input("Nueva cantidad: "))
     inventario[nombre]["cantidad"] = nueva_cantidad
     print("Cantidad actualizada.")
+    
+def eliminar_producto():
+    nombre = input("Nombre del producto a eliminar: ").lower()
+    
+    if nombre in inventario:
+        del inventario[nombre]
+        print("Producto eliminado.")
+    else:
+        print("El producto no existe.")
